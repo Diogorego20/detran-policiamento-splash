@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Eu sempre começo com a configuração básica do documento. Isso garante que o navegador saiba como interpretar o arquivo. -->
     <meta charset="UTF-8">
-    <!-- Esta meta tag é crucial para a responsividade. Eu a incluo para garantir que o layout se ajuste bem em celulares e tablets. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Este é o título que eu escolhi para aparecer na aba do navegador. -->
     <title>DETRAN POLICIAMENTO DIVISAO DE PDF</title>
-    
-    <!-- Eu importo a fonte 'Inter' do Google Fonts para dar um visual moderno e legível ao sistema. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bloco de Estilos (CSS) -->
     <style>
-        /* Meu reset básico para garantir que todos os navegadores comecem do mesmo ponto. */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* O estilo do corpo da página. Eu usei um gradiente azul para remeter às cores institucionais e centralizei o conteúdo com flexbox. */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* Azul profundo para azul claro */
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -34,7 +25,6 @@
             padding: 20px;
         }
 
-        /* O container principal, onde todo o conteúdo reside. Eu o fiz branco, com bordas arredondadas e uma sombra forte para destacá-lo. */
         .container {
             background: white;
             border-radius: 20px;
@@ -44,7 +34,6 @@
             overflow: hidden;
         }
 
-        /* A seção de cabeçalho. Eu usei o mesmo gradiente do body, mas com uma borda amarela (#ffd700) para um toque de contraste e oficialidade. */
         .header {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             padding: 40px 30px;
@@ -52,14 +41,12 @@
             border-bottom: 4px solid #ffd700;
         }
 
-        /* O ícone do logo. Eu usei emojis (🚗📄) para simplificar, mas em um projeto real, eu usaria uma imagem oficial. */
         .logo {
             font-size: 4em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* O título principal. Eu o fiz grande, em negrito e branco para garantir a visibilidade no fundo azul. */
         .header h1 {
             color: white;
             font-size: 1.8em;
@@ -69,20 +56,17 @@
             letter-spacing: 1px;
         }
 
-        /* O parágrafo de descrição no cabeçalho. */
         .header p {
             color: #e0e7ff;
             font-size: 1em;
             font-weight: 500;
         }
 
-        /* A área de conteúdo principal. */
         .content {
             padding: 40px 30px;
             text-align: center;
         }
 
-        /* O subtítulo de boas-vindas. */
         .content h2 {
             color: #1e3a8a;
             font-size: 1.5em;
@@ -90,17 +74,15 @@
             font-weight: 700;
         }
 
-        /* A lista de funcionalidades. Eu a estilizei para ser discreta, mas informativa. */
         .features {
             text-align: left;
             margin: 30px 0;
             padding: 20px;
             background: #f8fafc;
             border-radius: 10px;
-            border-left: 4px solid #3b82f6; /* Uma barra azul para destaque */
+            border-left: 4px solid #3b82f6;
         }
 
-        /* Cada item da lista de funcionalidades. */
         .feature-item {
             display: flex;
             align-items: center;
@@ -109,7 +91,6 @@
             font-size: 0.95em;
         }
 
-        /* O ícone de checkmark (✓) que eu criei usando o pseudo-elemento ::before. */
         .feature-item::before {
             content: "✓";
             display: inline-block;
@@ -125,7 +106,6 @@
             flex-shrink: 0;
         }
 
-        /* O botão principal de acesso. Eu usei um gradiente e adicionei transições e sombras para um efeito de "clique" mais agradável. */
         .access-button {
             display: inline-block;
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -141,18 +121,15 @@
             letter-spacing: 0.5px;
         }
 
-        /* Efeito de hover: eu movo o botão ligeiramente para cima para indicar que ele é clicável. */
         .access-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
         }
 
-        /* Efeito de clique: eu o trago de volta para a posição original. */
         .access-button:active {
             transform: translateY(0);
         }
 
-        /* O selo de segurança. Eu o fiz verde claro com um ícone de cadeado (🔒) para transmitir confiança ao usuário. */
         .security-badge {
             display: inline-flex;
             align-items: center;
@@ -172,7 +149,6 @@
             font-size: 1.2em;
         }
 
-        /* O rodapé. Eu o mantive simples, com informações de contato e uma nota de acesso restrito. */
         .footer {
             padding: 20px;
             background: #f8fafc;
@@ -182,7 +158,6 @@
             border-top: 1px solid #e2e8f0;
         }
 
-        /* Media Query para Responsividade: Eu ajusto o tamanho da fonte e o padding para telas menores (celulares). */
         @media (max-width: 640px) {
             .header h1 {
                 font-size: 1.4em;
@@ -204,20 +179,16 @@
     </style>
 </head>
 <body>
-    <!-- Passo a Passo da Estrutura (HTML) -->
     <div class="container">
-        <!-- 1. O Cabeçalho (Header) -->
         <div class="header">
             <div class="logo">🚗📄</div>
             <h1>DETRAN POLICIAMENTO<br>DIVISÃO DE PDF</h1>
             <p>Sistema Oficial de Gestão de Documentos</p>
         </div>
 
-        <!-- 2. O Conteúdo Principal (Content) -->
         <div class="content">
             <h2>Bem-vindo ao Sistema</h2>
             
-            <!-- A seção de funcionalidades -->
             <div class="features">
                 <div class="feature-item">Divisão de arquivos PDF em partes menores</div>
                 <div class="feature-item">Processamento em lote de múltiplos documentos</div>
@@ -226,35 +197,23 @@
                 <div class="feature-item">Acesso de qualquer dispositivo</div>
             </div>
 
-            <!-- O Botão de Acesso: Eu o configurei para levar o usuário à aplicação principal. -->
-            <!-- Eu notei que o link original era: https://3000-i2nlzyfihpdf491kenoys-f34ccf29.manusvm.computer -->
-            <!-- Para o novo endereço, eu vou usar o novo nome que você solicitou como um placeholder, mas o link real deve ser o URL da aplicação em execução. -->
-            <a href="Detran_policiamento_Estudante_de_estatistica" class="access-button">
+            <a href="https://3000-i2nlzyfihpdf491kenoys-f34ccf29.manusvm.computer" class="access-button">
                 ACESSAR SISTEMA
             </a>
 
-            <!-- O Selo de Segurança: Eu o adicionei para reforçar a segurança. -->
             <div class="security-badge">
                 Conexão Segura HTTPS
             </div>
         </div>
 
-        <!-- 3. O Rodapé (Footer) -->
         <div class="footer">
             <p><strong>DETRAN Paraíba</strong> - Sistema de Gestão Administrativa</p>
             <p style="margin-top: 5px;">Acesso restrito a servidores autorizados</p>
         </div>
     </div>
 
-    <!-- Bloco de Script (JavaScript) -->
     <script>
-        // Funcionalidade de Segurança (Comentário em Primeira Pessoa)
-        // Eu decidi não incluir JavaScript complexo nesta página de splash, pois ela é apenas uma porta de entrada.
-        // A segurança principal (como a validação de usuário e a lógica de divisão de PDF) deve ser tratada no backend da aplicação principal (o link que o botão aponta).
-        // Manter a página de entrada estática minimiza a superfície de ataque de injeção de scripts (XSS) aqui.
-        
-        // O código abaixo estava no original, mas eu o mantive comentado.
-        // Se eu quisesse um redirecionamento automático, eu descomentaria e ajustaria o tempo (3000ms = 3 segundos).
+        // Opcional: Redirecionar automaticamente após alguns segundos
         // setTimeout(function() {
         //     window.location.href = "https://3000-i2nlzyfihpdf491kenoys-f34ccf29.manusvm.computer";
         // }, 3000);
